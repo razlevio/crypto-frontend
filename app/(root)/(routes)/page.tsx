@@ -3,7 +3,7 @@ import { columns } from "@/components/columns";
 import { DataTable } from "@/components/date-table";
 
 export default async function RootPage() {
-  const APP_URL = process.env.NEXT_PUBLIC_APP_URL;
+  const APP_URL = "https://crypt-razlevio.vercel.app";
   const API_ENDPOINT = `${APP_URL}/api/last`;
 
   let data = null;
@@ -22,7 +22,7 @@ export default async function RootPage() {
     data = await res.json();
   } catch (error) {
     console.error("Failed to fetch data from /api/last", error);
-    return <h1>Problem Fetching Data</h1>
+    return <h1>Problem Fetching Data</h1>;
   }
 
   return (
