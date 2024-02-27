@@ -3,6 +3,7 @@ import { appConfig } from "@/config/app";
 import { Metadata } from "next";
 import { geist, geistMono } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
+import { RealTimeProvider } from "@/components/realtime-provider";
 
 export const metadata: Metadata = {
   title: {
@@ -55,7 +56,10 @@ export default function RootLayout({
       )}
       suppressHydrationWarning
     >
-      <body>{children}</body>
+      <body>
+        <RealTimeProvider />
+        {children}
+      </body>
     </html>
   );
 }

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: crypto-frontend-deployment
+  labels:
+    app: crypto-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: crypto-frontend
+  template:
+    metadata:
+      labels:
+        app: crypto-frontend
+    spec:
+      containers:
+        - name: crypto-frontend
+          image: razlevio/crypto-frontend:latest
+          ports:
+            - containerPort: 3000
