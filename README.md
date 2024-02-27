@@ -14,4 +14,4 @@ Two api routes:
 
 ## Deployment
 - Deployed on vercel `https://crypt-razlevio.vercel.app/` and github `https://github.com/razlevio/crypt`
-- TO UPDATE
+- TO UPDATEasdasdasdas
