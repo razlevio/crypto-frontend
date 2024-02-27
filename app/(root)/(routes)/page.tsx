@@ -7,6 +7,9 @@ export default async function RootPage() {
   let data = null;
 
   try {
+    // Fetch the latest cryptocurrency rates from the backend /last endpoint
+    // For dev - use the host machine's IP address "http://lcalhost:4000/last"
+    // For prod - use the service name "http://crypto-backend-service"
     const res = await fetch(`http://crypto-backend-service/last`, {
       cache: "no-store",
       method: "GET",

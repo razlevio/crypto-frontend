@@ -16,6 +16,8 @@ export function RealTimeProvider() {
     console.log("RealTimeProvider mounted");
 
     // Establish the WebSocket connection with the server
+    // For dev - use the host machine's IP address "http://lcalhost:4000"
+    // For prod - use the service name "http://crypto-backend-service"
     const socket = io("http://crypto-backend-service", {
       withCredentials: true,
       transports: ["websocket"],
